@@ -6,11 +6,88 @@
     <meta id="viewport" name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <title>Portfolio</title>
     <meta name="description" content="portfolio">
+    <link rel="stylesheet" href="./src/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 </head>
 <body>
 <main>
-    <h1>ポートフォリオ</h1>
+    <h1><span>K</span>abayama <span>P</span>ortfolio</h1>
+
+    <ul>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="1oe2lwgK2ds">
+                <img src="./src/img/1.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="vv6XoatZ36U">
+                <img src="./src/img/2.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="9WcgT8Q0A-M">
+                <img src="./src/img/3.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="HunGTsFwMcM">
+                <img src="./src/img/4.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="6mM6nukiwUE">
+                <img src="./src/img/5.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="5GbPElceP18">
+                <img src="./src/img/6.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="MMP5tuHibuk">
+                <img src="./src/img/7.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="7iTENxCJn00">
+                <img src="./src/img/8.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="jgIv3RxQ3DI">
+                <img src="./src/img/9.png">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="js-modal-open" data-movie="7xGlTa7K4QY">
+                <img src="./src/img/10.png">
+            </a>
+        </li>
+    </ul>
 </main>
-</div>
+<section class="modal is-hidden" id="modal">
+    <a href="javascript:void(0);" class="modal__overlay" id="modal-close"></a>
+    <div class="modal__contents">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+    </div>
+</section>
+<script>
+  var list = document.getElementsByClassName('js-modal-open');
+  var modal = document.getElementById('modal');
+  var close = document.getElementById('modal-close');
+  for (var i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', function (e) {
+      modal.classList.remove('is-hidden');
+      modal.querySelector('iframe').setAttribute('src', 'https://www.youtube.com/embed/' + e.currentTarget.dataset.movie);
+    });
+  }
+  close.addEventListener('click', function () {
+    modal.classList.add('is-hidden');
+    modal.querySelector('iframe').setAttribute('src', 'https://www.youtube.com/embed/');
+  });
+</script>
+
 </body>
 </html>
