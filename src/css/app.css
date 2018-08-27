@@ -104,12 +104,14 @@ input, select {
 }
 
 h1 {
-    height: 5vh;
+    height: 30vh;
+    box-sizing: border-box;
     text-align: center;
-    line-height: 5vh;
+    line-height: 30vh;
     font-size: 24px;
     color: #353535;
     font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 2px;
 }
 
 span {
@@ -123,7 +125,9 @@ main {
 }
 
 ul {
-    height: 95vh;
+    height: 50vh;
+    box-sizing: border-box;
+    padding: 0 70px;
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
@@ -132,8 +136,8 @@ ul {
 }
 
 li {
-    width: 19%;
-    height: 19vw;
+    width: 12%;
+    margin: 0 4%;
 }
 
 img {
